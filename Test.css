@@ -1,0 +1,39 @@
+/* Stylelint Fix doesn't work
+ * Message: `Stylelint: Expected "width" to come before "height" in group "size" (order/properties-order)`
+ */
+
+/* Uncomment and try to run Stylelint Fix: */
+
+/*
+.test1 {
+  display: flex;
+  opacity: 0;
+  height: 20px;
+  width: 100px;
+}
+*/
+
+/* Stylelint Fix works if you make another mistake
+ * Messages: `Stylelint: Expected "width" to come before "height" in group "size" (order/properties-order)` and
+ * `Stylelint: Expected single space after ":" with a single-line declaration (declaration-colon-space-after)`
+ */
+
+/* Uncomment and try to run Stylelint Fix: */
+
+/*
+.test2 {
+  display: flex;
+  opacity: 0;
+  height: 20px;
+  width:100px;
+}
+*/
+
+/* Expected result after run Stylelint Fix: */
+
+.expectedResult {
+  display: flex;
+  opacity: 0;
+  width: 100px;
+  height: 20px;
+}
